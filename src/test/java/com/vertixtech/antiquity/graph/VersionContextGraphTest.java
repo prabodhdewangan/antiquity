@@ -29,6 +29,10 @@ import static org.junit.Assert.assertThat;
 
 import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.impls.neo4j.Neo4jGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
 import com.vertixtech.antiquity.graph.identifierBehavior.LongGraphIdentifierBehavior;
 import com.vertixtech.antiquity.graph.matchers.HasElementIds;
 

@@ -22,7 +22,7 @@ import com.tinkerpop.blueprints.Features;
 
 /**
  * Configuration provides a list of properties which defines the behavior of the
- * associated {@link ActiveVersionedGraph}.
+ * associated {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph}.
  */
 public class Configuration {
     /**

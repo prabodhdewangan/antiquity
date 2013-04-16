@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.active;
 
 import java.util.Set;
 
@@ -25,6 +25,7 @@ import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.VertexQuery;
 import com.tinkerpop.blueprints.util.wrappers.event.EventVertex;
+import com.vertixtech.antiquity.graph.VEProps;
 
 /**
  * A {@link com.tinkerpop.blueprints.Vertex} that represents an active
@@ -134,7 +135,7 @@ public class ActiveVersionedVertex<V extends Comparable<V>> extends ActiveVersio
     /**
      * Get the private hash of the vertex or null if no private hash found.
      *
-     * @see Configuration#privateVertexHashEnabled
+     * @see com.vertixtech.antiquity.graph.Configuration#privateVertexHashEnabled
      * @return the private hash of the vertex or null if no private hash found.
      */
     public String getPrivateHash() {

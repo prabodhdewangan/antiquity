@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.active;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -37,6 +37,16 @@ import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.WrappedGraphQuery;
 import com.tinkerpop.blueprints.util.wrappers.event.listener.GraphChangedListener;
 import com.tinkerpop.blueprints.util.wrappers.id.IdGraph.IdFactory;
+import com.vertixtech.antiquity.graph.Configuration;
+import com.vertixtech.antiquity.graph.DefaultIdFactory;
+import com.vertixtech.antiquity.graph.utils.ElementUtils;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedEdge;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
+import com.vertixtech.antiquity.graph.NonTransactionalVersionedGraph;
+import com.vertixtech.antiquity.graph.TransactionalVersionedGraph;
+import com.vertixtech.antiquity.graph.VEProps;
+import com.vertixtech.antiquity.graph.VersionedGraphBase;
 import com.vertixtech.antiquity.graph.blueprints.EventIndexableGraph;
 import com.vertixtech.antiquity.graph.identifierBehavior.GraphIdentifierBehavior;
 import com.vertixtech.antiquity.range.Range;
@@ -68,8 +78,8 @@ import org.slf4j.LoggerFactory;
  * 
  * @see Graph
  * @see TransactionalGraph
- * @see NonTransactionalVersionedGraph
- * @see HistoricVersionedGraph
+ * @see com.vertixtech.antiquity.graph.NonTransactionalVersionedGraph
+ * @see com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph
  */
 public abstract class ActiveVersionedGraph<T extends KeyIndexableGraph & IndexableGraph, V extends Comparable<V>>
         extends VersionedGraphBase<T, V> implements GraphChangedListener, KeyIndexableGraph, IndexableGraph {

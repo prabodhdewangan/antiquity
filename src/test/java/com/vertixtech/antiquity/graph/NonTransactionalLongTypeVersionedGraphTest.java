@@ -22,6 +22,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import com.tinkerpop.blueprints.impls.tg.TinkerGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
 import com.vertixtech.antiquity.graph.identifierBehavior.LongGraphIdentifierBehavior;
 
 import org.junit.Test;

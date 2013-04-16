@@ -25,6 +25,8 @@ import static org.junit.Assert.assertThat;
 import com.tinkerpop.blueprints.TransactionalGraph;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.impls.neo4j.Neo4jGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
 import com.vertixtech.antiquity.graph.identifierBehavior.LongGraphIdentifierBehavior;
 import com.vertixtech.antiquity.range.Range;
 

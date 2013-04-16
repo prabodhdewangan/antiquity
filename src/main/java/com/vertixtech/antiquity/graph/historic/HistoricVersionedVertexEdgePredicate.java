@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.historic;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Predicate;
@@ -55,7 +55,7 @@ public class HistoricVersionedVertexEdgePredicate<V extends Comparable<V>> imple
     /**
      * Create an instance of this class.
      * 
-     * @param graph The {@link ActiveVersionedGraph} instance associated with
+     * @param graph The {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph} instance associated with
      *        this predicate
      * @param version the requested version range to filter upon.
      * @param withInternalEdges if true internal edges will be included

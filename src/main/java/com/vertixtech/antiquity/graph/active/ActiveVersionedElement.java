@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.active;
 
 import com.google.common.base.Preconditions;
 import com.tinkerpop.blueprints.Element;
@@ -24,10 +24,12 @@ import com.tinkerpop.blueprints.util.ElementHelper;
 import com.tinkerpop.blueprints.util.wrappers.event.EventElement;
 import com.tinkerpop.blueprints.util.wrappers.readonly.ReadOnlyEdge;
 import com.tinkerpop.blueprints.util.wrappers.readonly.ReadOnlyVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedElement;
+import com.vertixtech.antiquity.graph.VEProps;
 
 /**
- * Base class for {@link com.vertixtech.antiquity.graph.ActiveVersionedVertex}
- * and {@link com.vertixtech.antiquity.graph.ActiveVersionedEdge} active
+ * Base class for {@link ActiveVersionedVertex}
+ * and {@link ActiveVersionedEdge} active
  * elements implementations.
  */
 public abstract class ActiveVersionedElement<V extends Comparable<V>, T extends Element> implements Element {
@@ -39,7 +41,7 @@ public abstract class ActiveVersionedElement<V extends Comparable<V>, T extends 
     /**
      * The raw element as retrieved from the base blueprints graph
      * 
-     * @see com.vertixtech.antiquity.graph.ActiveVersionedGraph#getBaseGraph()
+     * @see ActiveVersionedGraph#getBaseGraph()
      */
     private final T rawElement;
 

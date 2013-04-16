@@ -20,7 +20,7 @@ package com.vertixtech.antiquity.graph.matchers;
 
 import com.google.common.collect.Lists;
 import com.tinkerpop.blueprints.Element;
-import com.vertixtech.antiquity.graph.HistoricVersionedElement;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedElement;
 import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;

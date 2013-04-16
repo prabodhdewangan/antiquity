@@ -28,16 +28,17 @@ import com.tinkerpop.blueprints.KeyIndexableGraph;
 import com.tinkerpop.blueprints.TransactionalGraph;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.id.IdGraph.IdFactory;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
 import com.vertixtech.antiquity.graph.identifierBehavior.GraphIdentifierBehavior;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A transactional implementation of {@link ActiveVersionedGraph}.
+ * A transactional implementation of {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph}.
  * 
  * @see TransactionalGraph
- * @see ActiveVersionedGraph
+ * @see com.vertixtech.antiquity.graph.active.ActiveVersionedGraph
  * @param <T> The type of the base graph, must support transactions.
  * @param <V> The version identifier type
  */

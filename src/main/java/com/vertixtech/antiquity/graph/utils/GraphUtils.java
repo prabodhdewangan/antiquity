@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,9 @@ import java.util.List;
 import com.tinkerpop.blueprints.Direction;
 import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Vertex;
+import com.vertixtech.antiquity.graph.VEProps;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
 
 /**
  * General read-only utils for {@link com.tinkerpop.blueprints.Graph}s

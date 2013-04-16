@@ -21,7 +21,7 @@ package com.vertixtech.antiquity.graph.identifierBehavior;
 import com.vertixtech.antiquity.graph.VersionedGraphBase;
 
 /**
- * A {@link com.vertixtech.antiquity.graph.ActiveVersionedGraph} identifier
+ * A {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph} identifier
  * behavior interface.
  * 
  * Defines the behavior of the graph identifier, this interface should be
@@ -31,7 +31,7 @@ import com.vertixtech.antiquity.graph.VersionedGraphBase;
  * The identifier type must implements the {@link Comparable} interface for
  * versions comparison.
  * 
- * @see com.vertixtech.antiquity.graph.ActiveVersionedGraph
+ * @see com.vertixtech.antiquity.graph.active.ActiveVersionedGraph
  */
 public interface GraphIdentifierBehavior<V extends Comparable<V>> {
     /**
@@ -41,7 +41,7 @@ public interface GraphIdentifierBehavior<V extends Comparable<V>> {
      * Graph latest version is stored in the root historic vertex.
      * <p>
      * 
-     * @see com.vertixtech.antiquity.graph.ActiveVersionedGraph#getRootVertex()
+     * @see com.vertixtech.antiquity.graph.active.ActiveVersionedGraph#getRootVertex()
      * 
      * @return The latest graph version.
      */

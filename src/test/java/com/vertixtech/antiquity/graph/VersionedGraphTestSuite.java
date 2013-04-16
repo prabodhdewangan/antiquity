@@ -42,6 +42,14 @@ import com.tinkerpop.blueprints.Parameter;
 import com.tinkerpop.blueprints.TransactionalGraph;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.impls.tg.TinkerGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedEdge;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedIndex;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedEdge;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertexIterable;
 import com.vertixtech.antiquity.graph.identifierBehavior.LongGraphIdentifierBehavior;
 import com.vertixtech.antiquity.range.Range;
 
@@ -328,7 +336,7 @@ public abstract class VersionedGraphTestSuite<V extends Comparable<V>> {
 
     /**
      * Test that
-     * {@link com.vertixtech.antiquity.graph.HistoricVersionedVertex#getVersion()}
+     * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex#getVersion()}
      * value is as expected.
      */
     @Test

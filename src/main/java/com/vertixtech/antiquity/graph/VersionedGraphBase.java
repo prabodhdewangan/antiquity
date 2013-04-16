@@ -28,10 +28,12 @@ import com.tinkerpop.blueprints.KeyIndexableGraph;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.WrapperGraph;
 import com.vertixtech.antiquity.graph.identifierBehavior.GraphIdentifierBehavior;
+import com.vertixtech.antiquity.graph.utils.ElementUtils;
+import com.vertixtech.antiquity.graph.utils.VersionedElementUtils;
 
 /**
- * Base class for {@link ActiveVersionedGraph} and
- * {@link HistoricVersionedGraph}.
+ * Base class for {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph} and
+ * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph}.
  */
 public abstract class VersionedGraphBase<T extends KeyIndexableGraph & IndexableGraph, V extends Comparable<V>>
         implements KeyIndexableGraph, WrapperGraph<T> {
@@ -83,7 +85,7 @@ public abstract class VersionedGraphBase<T extends KeyIndexableGraph & Indexable
      * Ensure graph integrity, must be invoked by the graph's builder before
      * returning the graph instance to the user.
      * 
-     * @see ActiveVersionedGraph.ActiveVersionedGraphBuilder
+     * @see com.vertixtech.antiquity.graph.active.ActiveVersionedGraph.ActiveVersionedGraphBuilder
      */
     protected void validate() {
         // TODO: Is verifiying that conf vertex exist is sufficient?

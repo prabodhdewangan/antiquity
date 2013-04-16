@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.historic;
 
 import java.util.Iterator;
 
@@ -24,6 +24,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterables;
 import com.tinkerpop.blueprints.CloseableIterable;
 import com.tinkerpop.blueprints.Vertex;
+import com.vertixtech.antiquity.graph.VEProps;
 import com.vertixtech.antiquity.range.Range;
 
 /**
@@ -46,7 +47,7 @@ public class HistoricVersionedVertexIterable<V extends Comparable<V>> implements
      * 
      * If no version is set, all vertices will be returned, this is required in
      * order to return all vertices in the graph when
-     * {@link com.vertixtech.antiquity.graph.HistoricVersionedGraph#getVertices()}
+     * {@link HistoricVersionedGraph#getVertices()}
      * is invoked.
      */
     private final Range<V> version;

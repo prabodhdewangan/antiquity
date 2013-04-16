@@ -24,6 +24,9 @@ import com.tinkerpop.blueprints.Graph;
 import com.tinkerpop.blueprints.GraphQuery;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.WrapperGraph;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedGraph;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
 
 /**
  * Version context is a graph wrapper which performs graph operations for a
@@ -57,7 +60,7 @@ public class VersionContextGraph<V extends Comparable<V>> implements Graph, Wrap
      * @param graph historic graph instance
      * @param version version of the context
      * @return instance of {@link VersionContextGraph} bound with the specified
-     *         {@link ActiveVersionedGraph} and version.
+     *         {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph} and version.
      */
     public static <V extends Comparable<V>> VersionContextGraph<V> vc(HistoricVersionedGraph<?, V> graph, V version) {
         return new VersionContextGraph<V>(graph, version);

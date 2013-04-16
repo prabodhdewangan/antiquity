@@ -22,19 +22,19 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.common.collect.Maps;
 import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.IndexableGraph;
 import com.tinkerpop.blueprints.KeyIndexableGraph;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.id.IdGraph.IdFactory;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedGraph;
 import com.vertixtech.antiquity.graph.identifierBehavior.GraphIdentifierBehavior;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A non transactional {@link ActiveVersionedGraph} implementation.
+ * A non transactional {@link com.vertixtech.antiquity.graph.active.ActiveVersionedGraph} implementation.
  * 
  * @param <T> The type of the graph
  * @param <V> The type of the graph version

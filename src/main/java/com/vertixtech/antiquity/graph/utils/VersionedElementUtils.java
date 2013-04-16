@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.vertixtech.antiquity.graph;
+package com.vertixtech.antiquity.graph.utils;
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -30,6 +30,12 @@ import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Element;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.wrappers.event.EventElement;
+import com.vertixtech.antiquity.graph.VEProps;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedElement;
+import com.vertixtech.antiquity.graph.active.ActiveVersionedVertex;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedEdge;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedElement;
+import com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex;
 import com.vertixtech.antiquity.range.Range;
 
 /**
@@ -133,8 +139,8 @@ public class VersionedElementUtils<V extends Comparable<V>> {
      * 
      * <p>
      * Note: this method receive a plain vertex and not
-     * {@link HistoricVersionedVertex} as it's executed by
-     * {@link HistoricVersionedVertexPredicate} over base graph elements.
+     * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex} as it's executed by
+     * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedVertexPredicate} over base graph elements.
      * </p>
      * 
      * @param versionedElement The element to get the start version.
@@ -169,8 +175,8 @@ public class VersionedElementUtils<V extends Comparable<V>> {
      * 
      * <p>
      * Note: this method receive a plain vertex and not
-     * {@link HistoricVersionedVertex} as it's executed by
-     * {@link HistoricVersionedVertexPredicate} over base graph elements.
+     * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedVertex} as it's executed by
+     * {@link com.vertixtech.antiquity.graph.historic.HistoricVersionedVertexPredicate} over base graph elements.
      * </p>
      * 
      * @param versionedElement The element to get the version range for.
